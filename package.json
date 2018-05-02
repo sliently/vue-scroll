@@ -1,7 +1,7 @@
 {
   "name": "vue-hp-scroll",
   "description": "vue-hp-scroll",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "HaipingXiaotong <847186328@qq.com>",
   "license": "MIT",
   "private": false,
@@ -9,7 +9,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "main": "dist/build.js",
+  "main": "dist/vue-scroll.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/HaipingXiaotong/vue-scroll"
