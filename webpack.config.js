@@ -2,11 +2,15 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/scroll/index.js',
+  // entry: './src/scroll/index.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'build.js',
+  // filename: 'vue-scroll.js',
+  // library: 'VueScroll',
+  // libraryTarget: 'umd'
   },
   module: {
     rules: [
