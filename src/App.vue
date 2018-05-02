@@ -1,23 +1,19 @@
 <template>
   <div id="app">
     <div style="height:500px;width:300px;border:1px solid #000;">
-      <scroll-bar :data="arr" ref="dd" @scroll="fff" @scrollBottom="test" @scrollTop="test2" height="500px" width="300px" :TrackYstyle="{backgroundColor:'#666'}">
+      <vue-scroll :data="arr" ref="dd" @scroll="fff" @scrollBottom="test" @scrollTop="test2" height="500px" width="300px" :TrackYstyle="{backgroundColor:'#666'}">
         <div>
           <div v-for="item in arr">{{item}}</div>
         </div>
-      </scroll-bar>
+      </vue-scroll>
     </div>
     <button @click="click">23</button>
   </div>
 </template>
 
 <script>
-import ScrollBar from "./scrollBar";
 export default {
   name: "app",
-  components: {
-    ScrollBar
-  },
   data() {
     return {
       msg: "Welcome to Your Vue.js App",
