@@ -2,6 +2,24 @@
 
 > 适用于vue2.0以上的滚动组件，自定义滚动条样式，美观简单易用，解决浏览器样式不兼容问题
 
+### 使用方法
+```javascript
+npm install vue-hp-scroll --S
+
+在main.js中引入
+
+import VueScroll from 'vue-hp-scroll'
+Vue.use(VueScroll)
+```
+
+> 在页面中使用
+
+```html
+<vue-scroll></vue-scroll>
+```
+
+> 示例
+
 ### 属性
 
 属性 | type | Explain
