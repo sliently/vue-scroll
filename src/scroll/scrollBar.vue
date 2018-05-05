@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-wrapper" :style="{width:width,height:height}">
-    <div v-if="isTrackY" class="scroll-track-y" :style="WrapperTracks">
+    <div v-if="isTrackY" style="background-color:#eee;borderRadius:5px;" class="scroll-track-y" :style="WrapperTracks">
       <div style="width:100%;background-color:rgba(0,0,0,.2);borderRadius:5px;" :style="TrackYstyles" @mousedown="mouseDown">
       </div>
     </div>
@@ -61,10 +61,6 @@ export default {
       type: Number,
       default: 7
     },
-    TrackColor: {
-      type: String,
-      default: "#eee"
-    },
     TrackYstyle: {
       type: Object
     },
@@ -76,8 +72,7 @@ export default {
     WrapperTracks() {
       return {
         ...this.WrapperTrack,
-        width: this.TrackSize + "px",
-        backgroundColor: this.TrackColor
+        width: this.TrackSize + "px"
       };
     },
     TrackYstyles() {

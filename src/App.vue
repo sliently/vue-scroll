@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <div style="height:500px;width:300px;border:1px solid #000;">
-      <vue-scroll :data="arr" ref="dd" @scroll="fff" @scrollBottom="test" @scrollTop="test2" height="500px" width="300px" :TrackYstyle="{backgroundColor:'#666'}">
+    <div class="item">
+      <vue-scroll :data="arr" ref="dd" @scroll="fff" @scrollBottom="test" @scrollTop="test2" height="500px" width="100px">
+        <div>
+          <div v-for="item in arr">{{item}}</div>
+        </div>
+      </vue-scroll>
+    </div>
+    <div class="item">
+      <vue-scroll :data="arr" ref="dd" height="500px" width="100px" :TrackYstyle="two" :WrapperTrack="twoWapper">
         <div>
           <div v-for="item in arr">{{item}}</div>
         </div>
@@ -16,8 +23,18 @@ export default {
   name: "app",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App",
-      arr: 30
+      arr: 130,
+      one: {
+        boxShadow: "0 0 0 5px #999"
+      },
+      oneWapper: {
+        border: "1px solid #000"
+      },
+      two: { backgroundColor: "#FFF" },
+      twoWapper: {
+        backgroundColor: "#000",
+        borderRadius: "5px"
+      }
     };
   },
   mounted() {},
@@ -42,5 +59,11 @@ export default {
 #app {
   padding: 0;
   margin: 0;
+}
+.item {
+  height: 500px;
+  width: 100px;
+  border: 1px solid #000;
+  display: inline-block;
 }
 </style>

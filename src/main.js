@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueScroll from './vue-scroll'
+import VueScroll from './scroll'
 console.log(VueScroll)
 Vue.use(VueScroll)
 new Vue({
